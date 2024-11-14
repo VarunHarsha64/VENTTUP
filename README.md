@@ -3,6 +3,9 @@
 ## Overview
 VENTTUP is a B2B marketplace application focusing on sustainable procurement and supply chain consulting. This web application tracks the status of orders and components across three main workflows: Supply Chain Distribution, Localization, and Contract Manufacturing.
 
+## Deployment
+Application is now live on https://venttup-client.vercel.app/.
+
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
