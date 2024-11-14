@@ -34,7 +34,7 @@ const PendingOrderVendor = () => {
     const fetchVendorOrders = async () => {
       try {
         const response = await axios.post(
-          "http://localhost:3000/api/orders/fetchVendorApprovalOrders",
+          "https://venttup-api.onrender.com/api/orders/fetchVendorApprovalOrders",
           {
             vendorId: userDetails.userId,
           },
@@ -78,7 +78,7 @@ const PendingOrderVendor = () => {
 
     try {
       await axios.post(
-        "http://localhost:3000/api/orders/acceptOrderVendor",
+        "https://venttup-api.onrender.com/api/orders/acceptOrderVendor",
         {
           orderId: selectedOrder._id,
         },
@@ -112,7 +112,7 @@ const PendingOrderVendor = () => {
 
     try {
       await axios.post(
-        "http://localhost:3000/api/orders/declineOrderVendor",
+        "https://venttup-api.onrender.com/api/orders/declineOrderVendor",
         { orderId: selectedOrder._id },
         {
           headers: {
@@ -141,7 +141,7 @@ const PendingOrderVendor = () => {
       formData.append("document", file);
 
       await axios.post(
-        "http://localhost:3000/api/orders/datasheetUpload",
+        "https://venttup-api.onrender.com/api/orders/datasheetUpload",
         formData,
         {
           headers: {
@@ -168,7 +168,7 @@ const PendingOrderVendor = () => {
     }
     try {
       await axios.post(
-        "http://localhost:3000/api/orders/dispatch",
+        "https://venttup-api.onrender.com/api/orders/dispatch",
         { orderId: selectedOrder._id},
         {
           headers: {

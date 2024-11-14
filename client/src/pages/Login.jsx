@@ -14,7 +14,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3000/api/users/login", { username, password });
+      const response = await axios.post("https://venttup-api.onrender.com/api/users/login", { username, password });
       const { token, role, message } = response.data;
 
       if (message) {

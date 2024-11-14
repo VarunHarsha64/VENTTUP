@@ -14,7 +14,7 @@ const VendorOrderHistory = () => {
       try {
         console.log(userDetails);
         const response = await axios.post(
-          "http://localhost:3000/api/orders/orderHistoryVendor",
+          "https://venttup-api.onrender.com/api/orders/orderHistoryVendor",
           {
             userId: userDetails.userId, // Include userId directly in the data object
           },

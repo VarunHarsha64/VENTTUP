@@ -21,7 +21,7 @@ const AdminOrderHistory = () => {
       try {
         console.log(userDetails);
         const response = await axios.post(
-            "http://localhost:3000/api/orders/orderHistoryAdmin",
+            "https://venttup-api.onrender.com/api/orders/orderHistoryAdmin",
             {
               userId: userDetails.userId, // Include userId directly in the data object
             },

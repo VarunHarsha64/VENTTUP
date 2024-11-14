@@ -34,7 +34,7 @@ const ApproveOrderAndAssignVendors = () => {
       setLoadingOrders(true);
       try {
         const response = await axios.get(
-          "http://localhost:3000/api/orders/getUnapprovedOrders",
+          "https://venttup-api.onrender.com/api/orders/getUnapprovedOrders",
           {
             headers: {
               Authorization: `Bearer ${userDetails.token}`,
@@ -53,7 +53,7 @@ const ApproveOrderAndAssignVendors = () => {
       setLoadingVendors(true);
       try {
         const response = await axios.get(
-          "http://localhost:3000/api/admin/fetchAllVendors",
+          "https://venttup-api.onrender.com/api/admin/fetchAllVendors",
           {
             headers: {
               Authorization: `Bearer ${userDetails.token}`,
@@ -88,7 +88,7 @@ const ApproveOrderAndAssignVendors = () => {
     }
     try {
       await axios.post(
-        "http://localhost:3000/api/orders/enquireVendor",
+        "https://venttup-api.onrender.com/api/orders/enquireVendor",
         { orderId: selectedOrder._id, vendorId: selectedVendor },
         {
           headers: {
@@ -112,7 +112,7 @@ const ApproveOrderAndAssignVendors = () => {
     }
     try {
       await axios.post(
-        "http://localhost:3000/api/orders/dataSheetVerification",
+        "https://venttup-api.onrender.com/api/orders/dataSheetVerification",
         { orderId: selectedOrder._id },
         {
           headers: {
@@ -143,7 +143,7 @@ const ApproveOrderAndAssignVendors = () => {
       formData.append("orderId", selectedOrder._id);
       formData.append("file", documentFile);
 
-      await axios.post("http://localhost:3000/api/admin/issuePO", formData, {
+      await axios.post("https://venttup-api.onrender.com/api/admin/issuePO", formData, {
         headers: {
           Authorization: `Bearer ${userDetails.token}`,
           "Content-Type": "multipart/form-data",
@@ -161,7 +161,7 @@ const ApproveOrderAndAssignVendors = () => {
     setIsLoading(true);
     try {
       await axios.post(
-        "http://localhost:3000/api/admin/manufacturingClearance",
+        "https://venttup-api.onrender.com/api/admin/manufacturingClearance",
         { orderId: selectedOrder._id },
         {
           headers: {
@@ -189,7 +189,7 @@ const ApproveOrderAndAssignVendors = () => {
     }
     try {
       await axios.post(
-        "http://localhost:3000/api/orders/inspection",
+        "https://venttup-api.onrender.com/api/orders/inspection",
         { orderId: selectedOrder._id, value: inspectionStatus },
         {
           headers: {

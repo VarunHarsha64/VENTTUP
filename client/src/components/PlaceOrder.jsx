@@ -24,7 +24,7 @@ const PlaceOrder = () => {
   useEffect(() => {
     const fetchItems = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/orders/fetchItems", {
+        const response = await axios.get("https://venttup-api.onrender.com/api/orders/fetchItems", {
           headers: {
             Authorization: `Bearer ${userDetails.token}`,
           },
@@ -57,7 +57,7 @@ const PlaceOrder = () => {
     formData.append("userId",userDetails.userId);
 
     try {
-      const response = await axios.post("http://localhost:3000/api/orders/placeOrder", formData, {
+      const response = await axios.post("https://venttup-api.onrender.com/api/orders/placeOrder", formData, {
         headers: {
           Authorization: `Bearer ${userDetails.token}`,
           "Content-Type": "multipart/form-data",

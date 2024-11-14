@@ -28,7 +28,7 @@ const AddViewItems = ({isLoading}) => {
     setIsLoading(true);
     try {
       const response = await axios.get(
-        "http://localhost:3000/api/orders/fetchItems",
+        "https://venttup-api.onrender.com/api/orders/fetchItems",
         {
           headers: {
             Authorization: `Bearer ${userDetails.token}`,
@@ -54,7 +54,7 @@ const AddViewItems = ({isLoading}) => {
     setIsLoading(true);
     try {
       console.log(itemId);
-      await axios.delete(`http://localhost:3000/api/admin/deleteItem`, {
+      await axios.delete(`https://venttup-api.onrender.com/api/admin/deleteItem`, {
         data: {
           id: itemId,
         },
@@ -84,7 +84,7 @@ const AddViewItems = ({isLoading}) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/admin/addItem",
+        "https://venttup-api.onrender.com/api/admin/addItem",
         formData,
         {
           headers: {

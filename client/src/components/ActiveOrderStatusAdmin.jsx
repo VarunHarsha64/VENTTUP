@@ -25,7 +25,7 @@ const ActiveOrderStatusAdmin = () => {
       try {
         const userId = jwtDecode(userDetails.token).id;
         const response = await axios.get(
-          "http://localhost:3000/api/orders/orderHistoryAdmin",
+          "https://venttup-api.onrender.com/api/orders/orderHistoryAdmin",
           {
             headers: {
               Authorization: `Bearer ${userDetails.token}`,
@@ -43,7 +43,7 @@ const ActiveOrderStatusAdmin = () => {
 
   async function getGate(orderId) {
     let response = await axios.get(
-      `http://localhost:3000/api/orders/trackOrder?orderId=${orderId}`,
+      `https://venttup-api.onrender.com/api/orders/trackOrder?orderId=${orderId}`,
       {
         headers: {
           Authorization: `Bearer ${userDetails.token}`,

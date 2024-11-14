@@ -24,7 +24,7 @@ export default function CustomerDashboard() {
       try {
         const userId = jwtDecode(userDetails.token).id;
         const response = await axios.get(
-          `http://localhost:3000/api/orders/fetchDispatchedOrders?userId=${userId}`,
+          `https://venttup-api.onrender.com/api/orders/fetchDispatchedOrders?userId=${userId}`,
           {
             headers: { Authorization: `Bearer ${userDetails.token}` },
           }

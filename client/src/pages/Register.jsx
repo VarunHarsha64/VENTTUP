@@ -34,7 +34,7 @@ const Register = () => {
     }
 
     try {
-      await axios.post("http://localhost:3000/api/users/register", { 
+      await axios.post("https://venttup-api.onrender.com/api/users/register", { 
         businessName,
         username,
         password,

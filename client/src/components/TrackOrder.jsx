@@ -25,7 +25,7 @@ const TrackOrder = () => {
       try {
         const userId = jwtDecode(userDetails.token).id;
         const response = await axios.get(
-          `http://localhost:3000/api/orders/fetchOrdersCustomer?userId=${userId}`,
+          `https://venttup-api.onrender.com/api/orders/fetchOrdersCustomer?userId=${userId}`,
           {
             headers: {
               Authorization: `Bearer ${userDetails.token}`,
@@ -43,7 +43,7 @@ const TrackOrder = () => {
 
   async function getGate(orderId) {
     let response = await axios.get(
-      `http://localhost:3000/api/orders/trackOrder?orderId=${orderId}`,
+      `https://venttup-api.onrender.com/api/orders/trackOrder?orderId=${orderId}`,
       {
         headers: {
           Authorization: `Bearer ${userDetails.token}`,

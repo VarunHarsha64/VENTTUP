@@ -24,7 +24,7 @@ const ActiveOrderStatusVendor = () => {
       try {
         const userId = userDetails.userId;
         const response = await axios.post(
-          'http://localhost:3000/api/orders/activeOrdersVendor',
+          'https://venttup-api.onrender.com/api/orders/activeOrdersVendor',
           {
             userId: userId
           },
@@ -45,7 +45,7 @@ const ActiveOrderStatusVendor = () => {
 
   async function getGate(orderId) {
     let response = await axios.get(
-      `http://localhost:3000/api/orders/trackOrder?orderId=${orderId}`,
+      `https://venttup-api.onrender.com/api/orders/trackOrder?orderId=${orderId}`,
       {
         headers: {
           Authorization: `Bearer ${userDetails.token}`,

@@ -36,7 +36,7 @@ const App = () => {
       const token = localStorage.getItem("token");
       if (token) {
         try {
-          const response = await axios.get("http://localhost:3000/api/users/verify-token", {
+          const response = await axios.get("https://venttup-api.onrender.com/api/users/verify-token", {
             headers: { Authorization:  `Bearer ${token}` }
           });
           // Update context if token is valid

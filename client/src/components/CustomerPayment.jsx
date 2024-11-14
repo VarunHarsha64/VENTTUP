@@ -29,7 +29,7 @@ const CustomerPayment = () => {
       try {
         const userId = jwtDecode(userDetails.token).id;
         const response = await axios.get(
-          `http://localhost:3000/api/orders/fetchDispatchedOrders?userId=${userId}`,
+          `https://venttup-api.onrender.com/api/orders/fetchDispatchedOrders?userId=${userId}`,
           {
             headers: { Authorization: `Bearer ${userDetails.token}` },
           }
@@ -67,7 +67,7 @@ const CustomerPayment = () => {
 
     try {
       await axios.post(
-        "http://localhost:3000/api/orders/doPayment",
+        "https://venttup-api.onrender.com/api/orders/doPayment",
         { orderId: selectedOrder._id },
         {
           headers: {

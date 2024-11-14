@@ -17,7 +17,7 @@ const UserManagement = () => {
   const fetchUnverifiedUsers = async () => {
     setIsLoading(true);
     try {
-      const response = await axios.get("http://localhost:3000/api/users/unverifiedList", {
+      const response = await axios.get("https://venttup-api.onrender.com/api/users/unverifiedList", {
         headers: {
           Authorization: `Bearer ${userDetails.token}`,
         },
@@ -42,7 +42,7 @@ const UserManagement = () => {
     setIsLoading(true);
     try {
       await axios.post(
-        `http://localhost:3000/api/users/verifyUser`,
+        `https://venttup-api.onrender.com/api/users/verifyUser`,
         { userId, action },
         {
           headers: {
@@ -73,7 +73,7 @@ const UserManagement = () => {
 
     try {
       await axios.post(
-        `http://localhost:3000/api/users/createVendor`,
+        `https://venttup-api.onrender.com/api/users/createVendor`,
         { username, password, businessName, address, phoneNo },
         {
           headers: {
