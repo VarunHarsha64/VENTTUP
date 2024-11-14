@@ -30,7 +30,7 @@ app.use("/api/users", userRoutes);
 app.use("/api/admin",/*adminAuth,*/ adminRoutes);
 
 // Default route
-app.get("/",adminAuth,(req, res) => res.json({ message: "VENTTUP server" }));
+app.get("/",(req, res) => res.json({ message: "VENTTUP server" }));
 
 
 
