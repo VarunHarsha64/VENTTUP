@@ -1,12 +1,12 @@
 const express = require("express");
 const cors = require("cors");
-const connectDB = require("../config/db");
-const orderController = require("../controllers/orderController");
-const orderRoutes = require("../routes/orderRoutes");
-const userRoutes = require("../routes/userRoutes");
-const adminRoutes = require("../routes/adminRoutes.js")
-const auth = require("../middleware/auth.js")
-const adminAuth = require("../middleware/adminAuth.js")
+const connectDB = require("./config/db.js");
+const orderController = require("./controllers/orderController.js");
+const orderRoutes = require("./routes/orderRoutes.js");
+const userRoutes = require("./routes/userRoutes.js");
+const adminRoutes = require("./routes/adminRoutes.js")
+const auth = require("./middleware/auth.js")
+const adminAuth = require("./middleware/adminAuth.js")
 
 const app = express();
 const PORT = process.env.PORT || 3000;
