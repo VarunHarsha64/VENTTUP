@@ -34,7 +34,7 @@ const VendorOrderHistory = () => {
       }
     };
     fetchOrderHistory();
-  }, [userDetails.token, isLoading]);
+  }, [userDetails.token]);
 
   return (
     <Box sx={{ padding: 2, height: "100vh", overflowY: "auto" }}>
