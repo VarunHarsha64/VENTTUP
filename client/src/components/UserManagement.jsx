@@ -35,7 +35,7 @@ const UserManagement = () => {
   // Fetch unverified users on component mount
   useEffect(() => {
     fetchUnverifiedUsers();
-  }, [userDetails.token, isLoading]);
+  }, [userDetails.token]);
 
   // Handle user verification or decline
   const handleUserAction = async (userId, action) => {
